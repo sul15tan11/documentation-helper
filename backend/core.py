@@ -9,15 +9,15 @@ import pinecone
 
 
 pinecone.init(
-    api_key=os.environ["bd71ed61-88b4-4743-9562-38913fb1a81c"],
-    environment=os.environ["us-west1-gcp-free"],
+    api_key=os.environ["PINECONE_API_KEY"],
+    environment=os.environ["PINECONE_ENVIRONMENT_REGION"],
 )
 
 INDEX_NAME = "arab-lc"
 
 
 def run_llm(query: str, chat_history: List[Dict[str, Any]] = []):
-    embeddings = OpenAIEmbeddings(openai_api_key=os.environ["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"])
+    embeddings = OpenAIEmbeddings(openai_api_key=os.environ["OPENAI_API_KEY"])
     docsearch = Pinecone.from_existing_index(
         embedding=embeddings,
         index_name=INDEX_NAME,
