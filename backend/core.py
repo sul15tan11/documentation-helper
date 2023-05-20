@@ -9,8 +9,8 @@ import pinecone
 
 
 pinecone.init(
-    api_key=os.environ["PINECONE_API_KEY"],
-    environment=os.environ["PINECONE_ENVIRONMENT_REGION"],
+    api_key=os.environ["bd71ed61-88b4-4743-9562-38913fb1a81c"],
+    environment=os.environ["us-west1-gcp-free"],
 )
 
 INDEX_NAME = "langchain-doc-index"
