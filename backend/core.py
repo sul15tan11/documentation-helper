@@ -8,6 +8,7 @@ from langchain.vectorstores import Pinecone
 import pinecone
 
 
+
 pinecone.init(
     api_key=os.environ["PINECONE_API_KEY"],
     environment=os.environ["PINECONE_ENVIRONMENT_REGION"],
