@@ -13,7 +13,7 @@ pinecone.init(
     environment=os.environ["us-west1-gcp-free"],
 )
 
-INDEX_NAME = "langchain-doc-index"
+INDEX_NAME = "arab-lc"
 
 
 def run_llm(query: str, chat_history: List[Dict[str, Any]] = []):
