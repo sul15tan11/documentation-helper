@@ -17,7 +17,7 @@ INDEX_NAME = "langchain-doc-index"
 
 
 def run_llm(query: str, chat_history: List[Dict[str, Any]] = []):
-    embeddings = OpenAIEmbeddings(openai_api_key=os.environ["OPENAI_API_KEY"])
+    embeddings = OpenAIEmbeddings(openai_api_key=os.environ["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"])
     docsearch = Pinecone.from_existing_index(
         embedding=embeddings,
         index_name=INDEX_NAME,
